@@ -1,6 +1,6 @@
 # AndroidExtension
 
-AndroidExtension try to provide useful and smooth extexsions for android developer.
+AndroidExtension try to provide useful and smooth extensions in kotlin for android developer.
 
 ## kotlin version
 
