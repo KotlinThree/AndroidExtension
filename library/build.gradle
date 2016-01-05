@@ -21,6 +21,10 @@ android {
         }
     }
 
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
     lintOptions {
         abortOnError false
     }
@@ -34,7 +38,8 @@ dependencies {
 }
 
 apply from: 'bintray.gradle'
-//
+//apply from: 'https://raw.githubusercontent.com/msdx/gradle-publish/master/bintray.gradle'
+
 //def siteUrl = 'https://github.com/KotlinThree/AndroidExtension'      // 项目的主页
 //def gitUrl = 'https://github.com/KotlinThree/AndroidExtension.git'   // Git仓库的url
 //group = 'com.ohmerhe.kotlinthree'
