@@ -2,11 +2,12 @@
 
 AndroidExtension try to provide useful and smooth extensions in kotlin for android developer.
 
-## kotlin version
+## Kotlin Version
 
-As kotlin may changes big in diffrent version, we will try to adapt the latest version as soon as possible. The library is compatible with latest Kotlin 1.0.0-beta-4584. 
+As kotlin may changes big in different version, we will try to adapt the latest version as soon as possible. The library
+ is compatible with latest Kotlin 1.0.0-beta-4584. 
 
-## reference
+## Reference
 
 ```
 repositories {
@@ -16,7 +17,35 @@ repositories {
 compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
 ```
 
-## usage
+## Usage
+
+### Resource
+
+```
+getString(context, R.String.app_name)
+getDrawable(context, R.drawable.ic_launcher)
+getColor(context, R.color.red)
+```
+
+#AndroidExtension
+
+AndroidExtension用kotlin为安卓开发者提供的扩展库，让安卓开发变得更简单。
+
+## Kotlin版本
+
+由于kotlin版本更新比较快，我们会尽力让我们的库跟上最新的版本，目前为止我们用最新的kotlin版本1.0.0-beta-4584。
+
+## 项目依赖
+
+```
+repositories {
+    jcenter()
+}
+
+compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
+```
+
+## 使用方法
 
 ### Resource
 
