@@ -6,6 +6,25 @@ AndroidExtension try to provide useful and smooth extensions in kotlin for andro
 
 As kotlin may changes big in diffrent version, we will try to adapt the latest version as soon as possible. The library is compatible with latest Kotlin 1.0.0-beta-4584. 
 
+## reference
+
+```
+repositories {
+    jcenter()
+}
+
+compile 'com.ohmerhe.kotlinthree:andex:0.1.1@aar'
+```
+
+## usage
+
+### Resource
+
+```
+getString(context, R.String.app_name)
+getDrawable(context, R.drawable.ic_launcher)
+getColor(context, R.color.red)
+```
 
 #License
 
