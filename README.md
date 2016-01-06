@@ -13,7 +13,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.ohmerhe.kotlinthree:andex:0.1.1@aar'
+compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
 ```
 
 ## usage
