@@ -22,16 +22,17 @@ compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
 ## Usage
 
 ### Get Resource
+in `activity/fragment` provide methods to call as list:
 
 ```
-getString(context, R.String.app_name)
-getDrawable(context, R.drawable.ic_launcher)
-getColor(context, R.color.red)
+getDrawable(R.drawable.ic_launcher)
+
+getColor(R.color.red)
 ```
 
 ### Find View 
 
-in `activity/fragment/view` or use corresponding instance to call.
+in `activity/fragment/view` provide methods to call as list:
 
 ```
 val imageView: ImageView = findView(R.id.image_view)
@@ -40,16 +41,15 @@ val imageView = findView<ImageView>(R.id.image_view)
 ```
 ### Toast
 
-in `activity/service/fragment` or use corresponding instance to call.
+in `activity/service/fragment` provide methods to call as list:
 
 ```
-// Toast.LENGTH_SHORT is optional
-toastText(R.String.toast, Toast.LENGTH_SHORT) 
+toast(R.String.toast) 
 
-toastText("toast", Toast.LENGTH_SHORT) 
+toast("toast") 
 
 // toastView is custom view
-toastView(toastView, Toast.LENGTH_SHORT) 
+toastView(toastView) 
 ```
 
 #AndroidExtension
@@ -73,38 +73,36 @@ compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
 ## 使用方法
 
 ### Resource
+在`activity/fragment`提供这样的方法可以调用：
 
 ```
-getString(context, R.String.app_name)
-getDrawable(context, R.drawable.ic_launcher)
-getColor(context, R.color.red)
+getDrawable(R.drawable.ic_launcher)
+
+getColor(R.color.red)
 ```
 
 ### Find View 
 
-在`activity/fragment/view`中这样调用：
+在`activity/fragment/view`提供这样的方法可以调用：
 
 ```
 val imageView: ImageView = findView(R.id.image_view)
 
 val imageView = findView<ImageView>(R.id.image_view)
 ```
-也可以使用对应的类的对象调用。
 
 ### Toast
 
-在activity、service或者fragment里面可以这样调用：
+在`activity/fragment/view`提供这样的方法可以调用：
 
 ```
-// Toast.LENGTH_SHORT 这个参数是可选参数
-toastText(R.String.toast, Toast.LENGTH_SHORT) 
+toast(R.String.toast) 
 
-toastText("toast", Toast.LENGTH_SHORT)
+toast("toast")
 
 // toastView是你自定义的视图
-toastView(toastView, Toast.LENGTH_SHORT) 
+toastView(toastView) 
 ```
-也可以使用对应的类的对象调用。
 
 #License
 
