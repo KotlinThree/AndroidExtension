@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/ohmerhe/maven/andex/images/download.svg) ](https://bintray.com/ohmerhe/maven/andex/_latestVersion) 
+# This library is not release formally.
 
 # AndroidExtension
 
@@ -21,12 +21,35 @@ compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
 
 ## Usage
 
-### Resource
+### Get Resource
 
 ```
 getString(context, R.String.app_name)
 getDrawable(context, R.drawable.ic_launcher)
 getColor(context, R.color.red)
+```
+
+### Find View 
+
+in `activity/fragment/view` or use corresponding instance to call.
+
+```
+val imageView: ImageView = findView(R.id.image_view)
+
+val imageView = findView<ImageView>(R.id.image_view)
+```
+### Toast
+
+in `activity/service/fragment` or use corresponding instance to call.
+
+```
+// Toast.LENGTH_SHORT is optional
+toastText(R.String.toast, Toast.LENGTH_SHORT) 
+
+toastText("toast", Toast.LENGTH_SHORT) 
+
+// toastView is custom view
+toastView(toastView, Toast.LENGTH_SHORT) 
 ```
 
 #AndroidExtension
@@ -56,6 +79,32 @@ getString(context, R.String.app_name)
 getDrawable(context, R.drawable.ic_launcher)
 getColor(context, R.color.red)
 ```
+
+### Find View 
+
+在`activity/fragment/view`中这样调用：
+
+```
+val imageView: ImageView = findView(R.id.image_view)
+
+val imageView = findView<ImageView>(R.id.image_view)
+```
+也可以使用对应的类的对象调用。
+
+### Toast
+
+在activity、service或者fragment里面可以这样调用：
+
+```
+// Toast.LENGTH_SHORT 这个参数是可选参数
+toastText(R.String.toast, Toast.LENGTH_SHORT) 
+
+toastText("toast", Toast.LENGTH_SHORT)
+
+// toastView是你自定义的视图
+toastView(toastView, Toast.LENGTH_SHORT) 
+```
+也可以使用对应的类的对象调用。
 
 #License
 
