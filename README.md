@@ -1,4 +1,4 @@
-# This library is not release formally.
+# This library is not released formally.
 
 # AndroidExtension
 
@@ -51,6 +51,8 @@ toast("toast")
 // toastView is custom view
 toastView(toastView) 
 ```
+
+# 这个库还没有正式发布
 
 #AndroidExtension
 
