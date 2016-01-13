@@ -16,6 +16,7 @@
 package com.kotlinthree.andex
 
 import kotlin.text.Regex
+import kotlin.text.matches
 
 /**
  * Created by ohmer on 12/29/15.
