@@ -15,15 +15,30 @@
 
 apply plugin: 'maven'
 
+version=PROJ_VERSION
+def nexusRepositoryUrl=NEXUS_RELEASE
+
+if (!isRelease.toBoolean()){
+    version = "${version}-SNAPSHOT"
+    nexusRepositoryUrl=NEXUS_SNAPSHOTS
+}
+
 uploadArchives {
     repositories {
         mavenDeployer {
-            repository(url: "file://${System.properties['user.home']}/.m2/repository")
+            println nexusRepositoryUrl
+            if (isReleaseToLocal.toBoolean()) {
+                repository(url: "file://${System.properties['user.home']}/.m2/repository")
+            } else {
+                repository(url: "$nexusRepositoryUrl") {
+                    authentication(userName:NEXUS_USERNAME, password:NEXUS_PASSWORD)
+                }
+            }
             pom.project {
                 name PROJ_NAME
                 groupId PROJ_GROUP
                 artifactId PROJ_ARTIFACTID
-                version PROJ_VERSION
+                version version
                 packaging 'aar'
 
                 licenses {
