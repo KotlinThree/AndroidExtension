@@ -8,8 +8,9 @@ import android.support.v7.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.Toast
-import com.kotlinthree.andex.widget.makeView
+import android.widget.ImageView
+
+import com.kotlinthree.andex.component.findView
 
 class MainActivity : AppCompatActivity() {
 
@@ -18,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val toolbar = findViewById(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
+        val imageView = findView<ImageView>(R.id.image_view)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener (fun(view: View) {
