@@ -39,6 +39,12 @@ val imageView: ImageView = findView(R.id.image_view)
 
 val imageView = findView<ImageView>(R.id.image_view)
 ```
+
+`findViewOften` replace ViewHolder when find view frequently in adapter.
+
+```
+ val textView: TextView = viewItem.findViewOften(R.id.text_view)
+```
 ### Toast
 
 in `activity/service/fragment` provide methods to call as list:
@@ -91,6 +97,11 @@ getColor(R.color.red)
 val imageView: ImageView = findView(R.id.image_view)
 
 val imageView = findView<ImageView>(R.id.image_view)
+```
+使用`findViewOften`，再也不用在adapter中繁琐的定义ViewHolder
+
+```
+ val textView: TextView = viewItem.findViewOften(R.id.text_view)
 ```
 
 ### Toast
