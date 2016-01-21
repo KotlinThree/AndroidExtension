@@ -16,7 +16,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
+compile 'com.ohmerhe.kotlinthree:andex:0.1.3@aar'
 ```
 
 ## Usage
@@ -75,7 +75,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.ohmerhe.kotlinthree:andex:0.1.2@aar'
+compile 'com.ohmerhe.kotlinthree:andex:0.1.3@aar'
 ```
 
 ## 使用方法
