@@ -13,16 +13,21 @@
  * limitations under the License.
  */
 
-package com.kotlinthree.andex.thread
+package com.kotlinthree.andex.demo
+
+import android.app.Application
+import com.squareup.leakcanary.LeakCanary
 
 /**
- * Created by ohmer on 1/23/16.
+ * Created by ohmer on 1/26/16.
  */
+class MyApplication : Application() {
+    override fun onCreate() {
+        super.onCreate()
 
-fun <T> T.post(runnable: () -> Unit){
-    WeakHandler().post(runnable)
-}
-
-fun <T> T.postDelay(delayMillis: Long, runnable: () -> Unit){
-    WeakHandler().postDelayed(delayMillis,runnable)
+        // 内存检测工具
+        if (BuildConfig.DEBUG){
+            LeakCanary.install(this);
+        }
+    }
 }
