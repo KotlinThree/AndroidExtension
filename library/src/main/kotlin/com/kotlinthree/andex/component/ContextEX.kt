@@ -17,12 +17,9 @@ package com.kotlinthree.andex.component
 
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.os.Handler
 import android.view.View
 import android.widget.Toast
-import com.kotlinthree.andex.thread.WeakHandler
 import com.kotlinthree.andex.widget.makeView
-import java.lang.ref.WeakReference
 
 /**
  * Created by ohmer on 1/13/16.

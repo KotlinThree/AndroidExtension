@@ -56,7 +56,7 @@ fun Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = getConte
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> Fragment.findView(id: Int): T = getView().findViewById(id) as T
+fun <T : View> Fragment.findView(id: Int): T? = getView()?.findViewById(id) as? T
 
 
 /**
@@ -126,7 +126,7 @@ fun android.support.v4.app.Fragment.toastView(view: View, duration: Int = Toast.
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> android.support.v4.app.Fragment.findView(id: Int): T = getView().findViewById(id) as T
+fun <T : View> android.support.v4.app.Fragment.findView(id: Int): T? = getView()?.findViewById(id) as? T
 
 /**
  * Return a drawable object associated with a particular resource ID and

@@ -27,7 +27,7 @@ import android.view.View
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> View.findView(id: Int): T = findViewById(id) as T
+fun <T : View> View.findView(id: Int): T? = findViewById(id) as? T
 
 /**
  * use to find child view by id frequently, such as in adapter
