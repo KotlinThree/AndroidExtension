@@ -7,7 +7,7 @@ AndroidExtension try to provide useful and smooth extensions in kotlin for andro
 ## Kotlin Version
 
 As kotlin may changes big in different version, we will try to adapt the latest version as soon as possible. The library
- is compatible with latest Kotlin 1.0.0-beta-4584. 
+ is compatible with latest Kotlin 1.0.0. 
 
 ## Reference
 
@@ -66,7 +66,7 @@ AndroidExtension用kotlin为安卓开发者提供的扩展库，让安卓开发�
 
 ## Kotlin版本
 
-由于kotlin版本更新比较快，我们会尽力让我们的库跟上最新的版本，目前为止我们用最新的kotlin版本1.0.0-beta-4584。
+由于kotlin版本更新比较快，我们会尽力让我们的库跟上最新的版本，目前为止我们用最新的kotlin版本1.0.0。
 
 ## 项目依赖
 

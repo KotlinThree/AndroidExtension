@@ -13,7 +13,6 @@ import android.view.View
 import android.widget.ImageView
 
 import com.kotlinthree.andex.component.findView
-import com.kotlinthree.andex.component.getResString
 import com.kotlinthree.andex.handler.post
 import com.kotlinthree.andex.handler.postDelay
 
@@ -26,8 +25,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         val imageView = findView<ImageView>(R.id.image_view)
 
-        getResString(R.string.app_name)
-        getResString(R.string.action_settings_param, 1234)
+        getString(R.string.app_name)
+        getString(R.string.action_settings_param, 1234)
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener (fun(view: View) {
