@@ -17,6 +17,7 @@ package com.kotlinthree.andex.component
 
 import android.content.Context
 import android.graphics.drawable.Drawable
+import android.support.v4.content.ContextCompat
 import android.view.View
 import android.widget.Toast
 import com.kotlinthree.andex.widget.makeView
@@ -67,8 +68,7 @@ fun Context.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = Toast(thi
  * @throws NotFoundException Throws NotFoundException if the given ID does
  *         not exist.
  */
-fun Context.getDrawable(resId: Int): Drawable = getResources().getDrawable(resId, null)
-
+fun Context.getDrawable(resId: Int): Drawable = resources.getDrawable(resId)
 
 /**
  * Returns a themed color integer associated with a particular resource ID.
@@ -84,4 +84,4 @@ fun Context.getDrawable(resId: Int): Drawable = getResources().getDrawable(resId
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun Context.getColor(resId: Int): Int = getResources().getColor(resId, null)
+fun Context.getColor(resId: Int): Int = resources.getColor(resId)

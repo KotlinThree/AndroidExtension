@@ -31,7 +31,7 @@ import android.widget.Toast
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) = getContext().toast(resId, duration)
+fun Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) = activity.toast(resId, duration)
 
 /**
  * toast with custom view
@@ -40,7 +40,7 @@ fun Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) = getContext(
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) = getContext().toast(text, duration)
+fun Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) = activity.toast(text, duration)
 
 /**
  * toast with custom view
@@ -49,7 +49,7 @@ fun Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) = getContex
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = getContext().toastView(view,duration)
+fun Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = activity.toastView(view,duration)
 
 /**
  * find child view by id, you should call this method after {@link #onCreateView}
@@ -89,7 +89,7 @@ fun Fragment.getDrawable(resId: Int): Drawable = getResources().getDrawable(resI
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun Fragment.getColor(resId: Int): Int = getResources().getColor(resId, null)
+fun Fragment.getColor(resId: Int): Int = resources.getColor(resId)
 
 /**
  * toast with custom view in support v4 fragment
@@ -98,7 +98,7 @@ fun Fragment.getColor(resId: Int): Int = getResources().getColor(resId, null)
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun android.support.v4.app.Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) = getContext()
+fun android.support.v4.app.Fragment.toast(resId: Int, duration: Int = Toast.LENGTH_SHORT) = activity
         .toast(resId, duration)
 
 /**
@@ -108,7 +108,7 @@ fun android.support.v4.app.Fragment.toast(resId: Int, duration: Int = Toast.LENG
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun android.support.v4.app.Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) = getContext()
+fun android.support.v4.app.Fragment.toast(text: String, duration: Int = Toast.LENGTH_SHORT) = activity
         .toast(text, duration)
 
 /**
@@ -118,7 +118,7 @@ fun android.support.v4.app.Fragment.toast(text: String, duration: Int = Toast.LE
  * @see android.widget.Toast.LENGTH_SHORT
  * @see android.widget.Toast.LENGTH_LONG
  */
-fun android.support.v4.app.Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = getContext()
+fun android.support.v4.app.Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = activity
         .toastView(view,duration)
 
 /**
@@ -158,4 +158,4 @@ fun android.support.v4.app.Fragment.getDrawable(resId: Int): Drawable = getResou
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun android.support.v4.app.Fragment.getColor(resId: Int): Int = getResources().getColor(resId, null)
+fun android.support.v4.app.Fragment.getColor(resId: Int): Int = resources.getColor(resId)
