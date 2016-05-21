@@ -67,9 +67,6 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             artifactId PROJ_ARTIFACTID
-            artifact classesJar
-            artifact javadocJar
-            artifact sourcesJar
 
             pom.withXml {
                 def root = asNode()
