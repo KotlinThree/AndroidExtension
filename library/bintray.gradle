@@ -40,12 +40,6 @@ task classesJar(type: Jar) {
     from "$buildDir/intermediates/classes/release"
 }
 
-artifacts {
-    archives classesJar
-    archives javadocJar
-    archives sourcesJar
-}
-
 def pomConfig = {
     licenses {
         license {

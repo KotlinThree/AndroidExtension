@@ -26,6 +26,7 @@ android {
     lintOptions {
         abortOnError false
     }
+
 }
 
 dependencies {
@@ -37,3 +38,4 @@ dependencies {
 
 apply from: 'bintray.gradle'
 apply from: 'maven.gradle'
+
