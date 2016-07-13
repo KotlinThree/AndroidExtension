@@ -72,7 +72,7 @@ fun <T : View> Fragment.findView(id: Int): T? = getView()?.findViewById(id) as? 
  * @throws NotFoundException Throws NotFoundException if the given ID does
  *         not exist.
  */
-fun Fragment.getDrawable(resId: Int): Drawable = getResources().getDrawable(resId, null)
+fun Fragment.getResDrawable(resId: Int): Drawable = getResources().getDrawable(resId, null)
 
 
 /**
@@ -89,7 +89,7 @@ fun Fragment.getDrawable(resId: Int): Drawable = getResources().getDrawable(resI
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun Fragment.getColor(resId: Int): Int = resources.getColor(resId)
+fun Fragment.getResColor(resId: Int): Int = resources.getColor(resId)
 
 /**
  * toast with custom view in support v4 fragment
@@ -141,7 +141,7 @@ fun <T : View> android.support.v4.app.Fragment.findView(id: Int): T? = getView()
  * @throws NotFoundException Throws NotFoundException if the given ID does
  *         not exist.
  */
-fun android.support.v4.app.Fragment.getDrawable(resId: Int): Drawable = getResources().getDrawable(resId, null)
+fun android.support.v4.app.Fragment.getResDrawable(resId: Int): Drawable = getResources().getDrawable(resId, null)
 
 
 /**
@@ -158,4 +158,4 @@ fun android.support.v4.app.Fragment.getDrawable(resId: Int): Drawable = getResou
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun android.support.v4.app.Fragment.getColor(resId: Int): Int = resources.getColor(resId)
+fun android.support.v4.app.Fragment.getResColor(resId: Int): Int = resources.getColor(resId)

@@ -68,7 +68,7 @@ fun Context.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = Toast(thi
  * @throws NotFoundException Throws NotFoundException if the given ID does
  *         not exist.
  */
-fun Context.getDrawable(resId: Int): Drawable = resources.getDrawable(resId)
+fun Context.getResDrawable(resId: Int): Drawable = resources.getDrawable(resId)
 
 /**
  * Returns a themed color integer associated with a particular resource ID.
@@ -84,4 +84,4 @@ fun Context.getDrawable(resId: Int): Drawable = resources.getDrawable(resId)
  *
  * @return A single color value in the form 0xAARRGGBB.
  */
-fun Context.getColor(resId: Int): Int = resources.getColor(resId)
+fun Context.getResColor(resId: Int): Int = resources.getColor(resId)
