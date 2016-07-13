@@ -21,18 +21,18 @@ import android.content.Context
  * Created by ohmer on 1/23/16.
  */
 
-fun <T> T.post(action: () -> Unit): Boolean{
-    return defaultWeakHandler.post(action)
-}
-
-fun <T> T.postDelay(delayMillis: Long, action: () -> Unit): Boolean{
-    return defaultWeakHandler.postDelayed(delayMillis, action)
-}
-
-fun <T> T.postAtTime(uptimeMillis: Long, action: () -> Unit): Boolean{
-    return defaultWeakHandler.postAtTime(uptimeMillis, action)
-}
-
-fun <T> T.postAtFrontOfQueue(action: () -> Unit): Boolean{
-    return defaultWeakHandler.postAtFrontOfQueue(action)
-}
+//internal fun <T> T.post(action: () -> Unit): Boolean{
+//    return defaultWeakHandler.post(action)
+//}
+//
+//internal fun <T> T.postDelay(delayMillis: Long, action: () -> Unit): Boolean{
+//    return defaultWeakHandler.postDelayed(delayMillis, action)
+//}
+//
+//internal fun <T> T.postAtTime(uptimeMillis: Long, action: () -> Unit): Boolean{
+//    return defaultWeakHandler.postAtTime(uptimeMillis, action)
+//}
+//
+//internal fun <T> T.postAtFrontOfQueue(action: () -> Unit): Boolean{
+//    return defaultWeakHandler.postAtFrontOfQueue(action)
+//}

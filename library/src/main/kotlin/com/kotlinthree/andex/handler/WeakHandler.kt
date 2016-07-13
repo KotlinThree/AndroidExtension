@@ -36,7 +36,7 @@ import java.util.concurrent.locks.ReentrantLock
  *
  */
 
-class WeakHandler(val callback: Handler.Callback? = null, looper: Looper = Looper.myLooper()) {
+private class WeakHandler(val callback: Handler.Callback? = null, looper: Looper = Looper.myLooper()) {
     private lateinit var mExec: ExecHandler
     private val mLock = ReentrantLock()
     private val mRunnables = ChainedRef(mLock, Runnable { })
@@ -434,4 +434,4 @@ private class ChainedRef(var lock: Lock,runnable: Runnable) {
     }
 }
 
-val defaultWeakHandler = WeakHandler()
+private val defaultWeakHandler = WeakHandler()
