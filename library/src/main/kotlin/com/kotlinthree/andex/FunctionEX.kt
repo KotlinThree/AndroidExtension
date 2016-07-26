@@ -20,3 +20,7 @@ package com.kotlinthree.andex
  */
 
 inline fun <R> orElse(block: () -> R): R = block()
+
+inline fun guard(vararg params: Any?): Boolean? {
+    return if (params.all { it != null }) true else null
+}
