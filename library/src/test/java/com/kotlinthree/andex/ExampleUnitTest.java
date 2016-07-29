@@ -1,4 +1,4 @@
-package com.kotlinthree.androidex;
+package com.kotlinthree.andex;
 
 import org.junit.Test;
 

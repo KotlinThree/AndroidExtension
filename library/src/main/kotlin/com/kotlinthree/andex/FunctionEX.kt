@@ -24,3 +24,9 @@ inline fun <R> orElse(block: () -> R): R = block()
 inline fun guard(vararg params: Any?): Boolean? {
     return if (params.all { it != null }) true else null
 }
+
+//三目运算
+fun <T> select(isTrue: Boolean, param1: () -> T, param2: () -> T) = if (isTrue) param1() else param2()
+
+fun <T> select(isTrue: Boolean, param1: T, param2: T) = if (isTrue) param1 else param2
+
