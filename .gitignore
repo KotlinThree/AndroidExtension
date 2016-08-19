@@ -9,4 +9,5 @@
 /captures
 proguard.map
 out/
+.gradletasknamecache
 
