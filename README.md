@@ -16,7 +16,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.ohmerhe.kotlinthree:andex:0.1.3@aar'
+compile 'com.ohmerhe.kotlinthree:andex:0.1.6'
 ```
 
 ## Usage
