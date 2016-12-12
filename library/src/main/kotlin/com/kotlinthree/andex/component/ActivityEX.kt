@@ -29,4 +29,4 @@ import android.view.View
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> Activity.findView(id: Int): T? = findViewById(id) as? T
+fun <T : View> Activity.findView(id: Int): T = findViewById(id) as T
