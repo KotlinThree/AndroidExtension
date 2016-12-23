@@ -21,7 +21,7 @@ package com.kotlinthree.andex
 @Deprecated("使用 T.orElse(orBlock: () -> T)", replaceWith = ReplaceWith("or(orBlock: () -> T)"))
 inline fun <R> orElse(block: () -> R): R = block()
 
-inline infix fun <T> T.orElse(orBlock: () -> T) = if (this == null) orBlock() else this
+inline infix fun <T : Any?> T.orElse(orBlock: () -> Unit) = if (this == null) orBlock() else this
 
 inline fun guard(vararg params: Any?): Boolean? {
     return if (params.all { it != null }) true else null

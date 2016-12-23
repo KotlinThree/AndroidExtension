@@ -3,6 +3,8 @@
 buildscript {
     ext.kotlin_version = '1.0.5'
     repositories {
+        // 优先使用本地库
+        mavenLocal()
         jcenter(){
             url 'http://jcenter.bintray.com/'
         }
@@ -22,6 +24,8 @@ buildscript {
 
 allprojects {
     repositories {
+        // 优先使用本地库
+        mavenLocal()
         jcenter(){
             url 'http://jcenter.bintray.com/'
         }

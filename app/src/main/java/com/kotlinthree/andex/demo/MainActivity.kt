@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val imageView = findView<ImageView>(R.id.image_view)
 
         getString(R.string.app_name)
-        getString(R.string.action_settings_param, 1234)
+        getString(R.string.action_settings_param, "1234")
 
         val fab = findViewById(R.id.fab) as FloatingActionButton
         fab.setOnClickListener (fun(view: View) {
