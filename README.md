@@ -6,7 +6,7 @@ AndroidExtension try to provide useful and smooth extensions in kotlin for andro
 
 ## Kotlin Version
 
-As kotlin may changes big in different version, we will try to adapt the latest version as soon as possible. The library
+As kotlin may have big changes in different version, we will try to adapt the latest version as soon as possible. The library
  is compatible with latest Kotlin 1.0.0. 
 
 ## Reference
