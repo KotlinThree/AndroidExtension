@@ -36,6 +36,6 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
 
-apply from: 'bintray.gradle'
-apply from: 'maven.gradle'
+//apply from: 'bintray.gradle'
+//apply from: 'maven.gradle'
 
