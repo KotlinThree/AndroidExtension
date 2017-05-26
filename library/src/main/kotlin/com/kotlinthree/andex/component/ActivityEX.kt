@@ -16,6 +16,7 @@
 package com.kotlinthree.andex.component
 
 import android.app.Activity
+import android.support.annotation.IdRes
 import android.view.View
 
 /**
@@ -29,4 +30,4 @@ import android.view.View
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> Activity.findView(id: Int): T = findViewById(id) as T
+inline fun <reified T : View> Activity.findView(@IdRes id: Int): T = findViewById(id) as T

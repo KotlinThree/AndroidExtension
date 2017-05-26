@@ -17,6 +17,8 @@ package com.kotlinthree.andex.component
 
 import android.app.Fragment
 import android.graphics.drawable.Drawable
+import android.support.annotation.IdRes
+import android.support.annotation.StringRes
 import android.view.View
 import android.widget.Toast
 
@@ -56,8 +58,7 @@ fun Fragment.toastView(view: View, duration: Int = Toast.LENGTH_LONG) = activity
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> Fragment.findView(id: Int): T = view?.findViewById(id) as T
-
+inline fun <reified T : View> Fragment.findView(@IdRes id: Int): T = view?.findViewById(id) as T
 
 /**
  * Return a drawable object associated with a particular resource ID and
@@ -126,7 +127,7 @@ fun android.support.v4.app.Fragment.toastView(view: View, duration: Int = Toast.
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> android.support.v4.app.Fragment.findView(id: Int): T = view?.findViewById(id) as T
+inline fun <reified T : View> android.support.v4.app.Fragment.findView(id: Int): T = view?.findViewById(id) as T
 
 /**
  * Return a drawable object associated with a particular resource ID and

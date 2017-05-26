@@ -15,6 +15,7 @@
 
 package com.kotlinthree.andex.view
 
+import android.support.annotation.IdRes
 import android.util.SparseArray
 import android.view.View
 
@@ -27,15 +28,15 @@ import android.view.View
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> View.findView(id: Int): T = findViewById(id) as T
+inline fun <reified T : View> View.findView(@IdRes id: Int): T = findViewById(id) as T
 
 /**
  * use to find child view by id frequently, such as in adapter
  * @param id
  * @return The view that has the given id in the hierarchy or null
  */
-fun <T : View> View.findViewOften(viewId: Int): T {
-    var viewHolder: SparseArray<View> = tag as? SparseArray<View> ?: SparseArray()
+inline fun <reified T : View> View.findViewOften(@IdRes viewId: Int): T {
+    val viewHolder: SparseArray<View> = tag as? SparseArray<View> ?: SparseArray()
     tag = viewHolder
     var childView: View? = viewHolder.get(viewId)
     if (null == childView) {
